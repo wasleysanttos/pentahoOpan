@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>6-Migra atividades v2</name>
+    <name>4-Migra calendario contabil x area estrategica 3</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;</directory>
+    <directory>&#x2f;</directory>
     <parameters>
     </parameters>
     <log>
@@ -17,7 +17,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -34,6 +34,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -62,9 +67,11 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2015&#47;10&#47;23 00:51:23.673</created_date>
+  <created_date>2015&#x2f;10&#x2f;23 00&#x3a;51&#x3a;23.673</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#47;10&#47;23 00:51:23.673</modified_date>
+  <modified_date>2015&#x2f;10&#x2f;23 00&#x3a;51&#x3a;23.673</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
@@ -145,7 +152,7 @@
     <name>dwsimma</name>
     <server/>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>dwsimma</database>
     <port>1521</port>
     <username/>
@@ -168,11 +175,11 @@
     <name>glpi</name>
     <server>10.10.2.1</server>
     <type>MYSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>glpi</database>
     <port>3306</port>
     <username>dba_admin</username>
-    <password>Encrypted 2be98afc86aa7f292a61baa75dc9baed4</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -238,14 +245,89 @@
     </attributes>
   </connection>
   <connection>
+    <name>OPANDataBase</name>
+    <server>DESKTOP-F60G61I</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>OPANDataBase</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f28af80baa40d185fcc8</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>OpanOficial</name>
+    <server>localhost</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>OPANDataBase</database>
+    <port>1433</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>OPANTeste</name>
+    <server>localhost</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>OPANDataBaseTeste</database>
+    <port>1433</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
     <name>OrcamentoVM</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>OrcamentoVM</database>
     <port>1433</port>
     <username>siga</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb7981628d95ffd4</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -264,11 +346,11 @@
     <name>Pentaho</name>
     <server>localhost</server>
     <type>MYSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>Pentaho</database>
     <port>3306</port>
     <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb09ab7eca93a7d5</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -289,7 +371,7 @@
     <name>Protheus</name>
     <server/>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>Protheus</database>
     <port>1521</port>
     <username/>
@@ -312,7 +394,7 @@
     <name>Protheus7</name>
     <server/>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>Protheus7</database>
     <port>1521</port>
     <username/>
@@ -335,11 +417,11 @@
     <name>redes_dw</name>
     <server>localhost</server>
     <type>MYSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>redes_dw</database>
     <port>3306</port>
     <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb09ab7eca93a7d5</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -360,11 +442,11 @@
     <name>SGI</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>SGI</database>
     <port>1433</port>
     <username>siga</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb7981628d95ffd4</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -383,11 +465,11 @@
     <name>siga_dw</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>siga_dw</database>
     <port>1433</port>
     <username>siga</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb7981628d95ffd4</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -406,7 +488,7 @@
     <name>SIMMA</name>
     <server>192.168.2.204</server>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>SIMMA</database>
     <port>1433</port>
     <username>sa</username>
@@ -429,7 +511,7 @@
     <name>Simmabr</name>
     <server/>
     <type>MSSQLNATIVE</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>Simmabr</database>
     <port>1521</port>
     <username/>
@@ -452,7 +534,7 @@
     <name>SimmaSTS</name>
     <server/>
     <type>MSSQLNATIVE</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>SimmaSTS</database>
     <port>1521</port>
     <username/>
@@ -495,37 +577,14 @@
     </attributes>
   </connection>
   <connection>
-    <name>STS</name>
-    <server>192.168.1.7</server>
+    <name>STSDataBase</name>
+    <server/>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>SUN6</database>
-    <port>1433</port>
-    <username>sa</username>
-    <password>Encrypted 2be98afc86aa7f28af80baa40d185fcc8</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>STSDataBase</name>
-    <server>192.168.1.7</server>
-    <type>MSSQL</type>
-    <access>JNDI</access>
     <database>STSDataBase</database>
-    <port>1433</port>
-    <username>siga</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cd9ba8db</password>
+    <port>1521</port>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -534,7 +593,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
@@ -544,11 +603,11 @@
     <name>STSDW</name>
     <server>10.10.2.6</server>
     <type>MYSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>STSDW</database>
     <port>3306</port>
     <username>pentaho</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb09ab7eca93a7d5</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -568,7 +627,7 @@
     <server>192.168.1.5</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>STSDataBase</database>
+    <database>dadosadv</database>
     <port>1433</port>
     <username>siga</username>
     <password>Encrypted 2be98afc86aa7f2e4cb7981628d95ffd4</password>
@@ -590,11 +649,11 @@
     <name>STSProtheus</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>STSProtheus</database>
     <port>1433</port>
     <username>siga</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb7981628d95ffd4</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -705,11 +764,11 @@
     <name>SunSystem</name>
     <server>192.168.1.32</server>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>SunSystem</database>
     <port>1433</port>
     <username>sa</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb799d45f0a19cea</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -728,11 +787,11 @@
     <name>VMMembership</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>JNDI</access>
+    <access>Native</access>
     <database>VMMembership</database>
     <port>1433</port>
     <username>siga</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb7981628d95ffd4</password>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -748,46 +807,59 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Table input</from><to>Database join</to><enabled>Y</enabled> </hop>  <hop> <from>Database join</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Execute SQL script</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Table input 2</from><to>retorna calendarios</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>retorna calendarios</from><to>verifica se ja existe</to><enabled>Y</enabled> </hop>
+  <hop> <from>verifica se ja existe</from><to>Filter rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Sort rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows</from><to>Execute SQL script</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
-    <name>Database join</name>
+    <name>retorna calendarios</name>
     <type>DBJoin</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>STSTeste</connection>
+    <connection>OPANDataBase</connection>
     <rowlimit>0</rowlimit>
-    <sql>SELECT 
-AccountingCalendarOperationalObjective.Sequential as IdCalendarioOperacional2016
-
-FROM AccountingCalendarOperationalObjective
-				INNER JOIN AccountingCalendar on (AccountingCalendarOperationalObjective.AccountingCalendar = AccountingCalendar.Sequential)
-				INNER JOIN OperationalObjective on (AccountingCalendarOperationalObjective.OperationalObjective = OperationalObjective.Sequential)
-				INNER JOIN StrategicObjective on (OperationalObjective.StrategicObjective = StrategicObjective.Sequential)
-				inner join Project on (StrategicObjective.Project = Project.Sequential)
-where AccountingCalendar.FiscalYear = year(getdate())-1				
-and Project.Sequential =?
-And OperationalObjective.Sequential =?</sql>
-    <outer_join>N</outer_join>
+    <sql>SELECT &#xd;&#xa;AccountingCalendar.Sequential as Id,&#xa;FiscalYear&#xa;&#xa;FROM Project &#xa;  inner join AccountingCalendar ON &#x28;AccountingCalendar.Project &#x3d; Project.Sequential&#x29;    &#xa; &#xa;Where Project.Sequential &#x3d;&#x3f;&#xa;&#xd;&#xa;&#xd;&#xa;</sql>
+    <outer_join>Y</outer_join>
     <replace_vars>Y</replace_vars>
     <parameter>
       <field>
         <name>IdProjeto</name>
         <type>Integer</type>
       </field>
-      <field>
-        <name>IdOperacional</name>
-        <type>Integer</type>
-      </field>
     </parameter>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>394</xloc>
-      <yloc>169</yloc>
+      <xloc>224</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Dummy &#x28;do nothing&#x29;</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>480</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -797,115 +869,60 @@ And OperationalObjective.Sequential =?</sql>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>STSTeste</connection>
+    <connection>OPANDataBase</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>INSERT INTO Activity 
-(
-Code
-,Description
-,DescriptionEnglish
-,ActivityType
-,OperationalObjective
-,PlanningOperationalObjective
-,ManAided
-,WomenAided
-,TeenAided
-,ChildrenAided
-,PreAssumption
-,PreAssumptionEnglish
-,Thematic
-,FundType
-,PlanningJanuary
-,PlanningFebruary
-,PlanningMarch
-,PlanningApril
-,PlanningMay
-,PlanningJune
-,PlanningJuly
-,PlanningAugust
-,PlanningSeptember
-,PlanningOctober
-,PlanningNovember
-,PlanningDecember
-,Status
-,Deleted
-,TimeStampSTS
-,AccountingCalendarOperationalObjective
-,StrategicAreaMain
-,CurrentPlanning
-,Mapping
-,HEA
-,Translated
-,Regional
-)
-values
-(
-&apos;?&apos;,
-&apos;?&apos;,
-&apos;?&apos;,
-?,
-NULL,
-NULL,
-0,
-0,
-0,
-0,
-&apos;?&apos;,
-&apos;?&apos;,
-1,
-?,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-1,
-0,
-GETDATE(),
-?,
-?,
-1,
-NULL,
-?,
-?,
-?
-)</sql>
+    <quoteString>N</quoteString>
+    <sql>INSERT INTO AccountingCalendarStrategicArea &#xa;&#x28;&#xa;Description,&#xa;DescriptionEnglish,&#xa;ExportDate,&#xa;ReasonExecute,&#xa;GeneralComment,&#xa;PlanningActionAdjustment,&#xa;AnalysisProblem,&#xa;AnalysisProblemEnglish,&#xa;AccountingCalendar,&#xa;StrategicArea,&#xa;TimeStampSTS,&#xa;Deleted,&#xa;Visible&#xa;&#x29;&#xa;values&#xa;&#x28;&#xa;&#x27;Gerado pelo sistema&#x27;,&#xa;null,&#xa;null,&#xa;&#x27;&#x27;,&#xa;&#x27;&#x27;,&#xa;&#x27;&#x27;,&#xa;null,&#xa;null,&#xa;&#x3f;,&#xa;&#x3f;,&#xa;getdate&#x28;&#x29;,&#xa;0,&#xa;1&#xa;&#x29;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
     <read_field/>
     <arguments>
-       <argument><name>Code</name></argument>
-       <argument><name>AtividadeDescricao</name></argument>
-       <argument><name>DescricaoIngles</name></argument>
-       <argument><name>ActivityType</name></argument>
-       <argument><name>PreAssumption</name></argument>
-       <argument><name>PreAssumptionEnglish</name></argument>
-       <argument><name>FundType</name></argument>
-       <argument><name>IdCalendarioOperacional2016</name></argument>
-       <argument><name>StrategicAreaMain</name></argument>
-       <argument><name>HEA</name></argument>
-       <argument><name>Translated</name></argument>
-       <argument><name>Regional</name></argument>
+       <argument><name>Id</name></argument>
+       <argument><name>IdArea</name></argument>
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>813</xloc>
-      <yloc>170</yloc>
+      <xloc>920</xloc>
+      <yloc>83</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Select values</send_true_to>
+<send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>Achou</leftvalue>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>Integer</type><text>0</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>480</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -915,76 +932,62 @@ NULL,
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
-      <remove>        <name>AnoFiscal</name>
-      </remove>      <remove>        <name>Projeto</name>
-      </remove>      <remove>        <name>IdProjeto</name>
-      </remove>      <remove>        <name>Atividade</name>
-      </remove>      <remove>        <name>IdOperacional</name>
-      </remove>      <remove>        <name>Atividade2015</name>
-      </remove>      <remove>        <name>TipoAtividade</name>
-      </remove>    </fields>     <cluster_schema/>
+    <fields>      <field>        <name>IdProjeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Projeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IdArea</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AreaEstrategica</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Achou</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FiscalYear</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>556</xloc>
-      <yloc>169</yloc>
+      <xloc>608</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Table input</name>
+    <name>Table input 2</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>STSTeste</connection>
-    <sql>SELECT 
-PlanejamentoProjeto2015.AnoFiscal,
-PlanejamentoProjeto2015.Projeto,
-PlanejamentoProjeto2015.IdProjeto,
-PlanejamentoProjeto2015.Atividade,
-PlanejamentoProjeto2015.Code,
-PlanejamentoProjeto2015.FundType,
-PlanejamentoProjeto2015.AtividadeDescricao as AtividadeDescricao,
-PlanejamentoProjeto2015.DescricaoIngles,
-PlanejamentoProjeto2015.PreAssumption,
-PlanejamentoProjeto2015.PreAssumptionEnglish,
-PlanejamentoProjeto2015.TipoAtividade,
-PlanejamentoProjeto2015.ActivityType,
-PlanejamentoProjeto2015.IdOperacional,
-PlanejamentoProjeto2015.Atividade as Atividade2015,
-PlanejamentoProjeto2015.StrategicAreaMain,
-case
-when PlanejamentoProjeto2015.HEA = 0 then 0
-when PlanejamentoProjeto2015.HEA = 1 then 1
-END as HEA,
-case
-when PlanejamentoProjeto2015.Translated = 0 then 0
-when PlanejamentoProjeto2015.Translated = 1 then 1
-END as Translated,
-case
-when PlanejamentoProjeto2015.Regional = 0 then 0
-when PlanejamentoProjeto2015.Regional = 1 then 1
-END as Regional
-
-
-FROM PlanejamentoProjeto as PlanejamentoProjeto2015
-									LEFT JOIN PlanejamentoProjeto AS PlanejamentoProjeto2016 ON (PlanejamentoProjeto2015.Projeto = PlanejamentoProjeto2016.Projeto and PlanejamentoProjeto2015.Atividade = PlanejamentoProjeto2016.Atividade and PlanejamentoProjeto2016.AnoFiscal =YEAR(getdate()))
-									
-									
-WHERE PlanejamentoProjeto2015.AnoFiscal =YEAR(getdate()) -1
-AND PlanejamentoProjeto2016.Atividade IS NULL
---AND PlanejamentoProjeto2015.TipoAtividade =&apos;Operacional&apos;
-ORDER BY Projeto</sql>
+    <connection>OPANDataBase</connection>
+    <sql>SELECT &#xd;&#xa;DISTINCT&#xd;&#xa;--AccountingCalendar.Sequential as IdAnoFiscal,&#xd;&#xa;--AccountingCalendar.FiscalYear as AnoFiscal,&#xd;&#xa;Project.Sequential AS IdProjeto,&#xd;&#xa;Project.Code AS Projeto,&#xd;&#xa;--AccountingCalendarStrategicArea.Sequential as IdAreaCalendario,&#xd;&#xa;StrategicArea.Sequential as IdArea,&#xd;&#xa;LTRIM&#x28;RTRIM&#x28;StrategicArea.Code&#x29;&#x29; as AreaEstrategica&#xd;&#xa;&#xd;&#xa;FROM Project &#xd;&#xa;  inner join AccountingCalendar ON &#x28;AccountingCalendar.Project &#x3d; Project.Sequential&#x29;    &#xd;&#xa;  inner join AccountingCalendarStrategicArea ON &#x28;AccountingCalendarStrategicArea.AccountingCalendar &#x3d; AccountingCalendar.Sequential&#x29;   &#xd;&#xa;  inner join StrategicArea on &#x28;AccountingCalendarStrategicArea.StrategicArea &#x3d;StrategicArea.Sequential&#x29;&#xd;&#xa;&#xd;&#xa;--Where AccountingCalendar.FiscalYear &#x3e;&#x3d;2015&#xd;&#xa;&#xd;&#xa;--where Project.Sequential &#x3d; 4&#xd;&#xa;&#xd;&#xa;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -992,8 +995,92 @@ ORDER BY Projeto</sql>
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>153</xloc>
-      <yloc>167</yloc>
+      <xloc>80</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>verifica se ja existe</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>OPANDataBase</connection>
+    <rowlimit>0</rowlimit>
+    <sql>SELECT &#xa;COUNT&#x28;&#x2a;&#x29; AS Achou&#xa;&#xa;FROM Project &#xa;  inner join AccountingCalendar ON &#x28;AccountingCalendar.Project &#x3d; Project.Sequential&#x29;    &#xa;  inner join AccountingCalendarStrategicArea ON &#x28;AccountingCalendarStrategicArea.AccountingCalendar &#x3d; AccountingCalendar.Sequential&#x29;   &#xa;  inner join StrategicArea on &#x28;AccountingCalendarStrategicArea.StrategicArea &#x3d;StrategicArea.Sequential&#x29;&#xa;&#xa;Where AccountingCalendar.FiscalYear &#x3d; &#x3f;&#xa;AND Project.Sequential &#x3d;&#x3f;&#xa;AND StrategicArea.Sequential &#x3d;&#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>FiscalYear</name>
+        <type>Integer</type>
+      </field>
+      <field>
+        <name>IdProjeto</name>
+        <type>Integer</type>
+      </field>
+      <field>
+        <name>IdArea</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>352</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>IdProjeto</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>FiscalYear</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>AreaEstrategica</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>720</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1003,4 +1090,5 @@ ORDER BY Projeto</sql>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>

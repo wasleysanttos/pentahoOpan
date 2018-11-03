@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>6-Migra atividades v2</name>
+    <name>1-Cria calendario contabil 2</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -67,11 +67,34 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2015&#x2f;10&#x2f;23 00&#x3a;51&#x3a;23.673</created_date>
+  <created_date>2015&#x2f;10&#x2f;22 23&#x3a;42&#x3a;52.809</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#x2f;10&#x2f;23 00&#x3a;51&#x3a;23.673</modified_date>
+  <modified_date>2015&#x2f;10&#x2f;22 23&#x3a;42&#x3a;52.809</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>cria calendarios para todos os anos ate a data final do projeto. &#xc9; gerado um calendario por execu&#xe7;&#xe3;o</note>
+      <xloc>96</xloc>
+      <yloc>32</yloc>
+      <width>594</width>
+      <heigth>25</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>bolsafamilia</name>
@@ -147,10 +170,33 @@
     </attributes>
   </connection>
   <connection>
+    <name>DWhub</name>
+    <server>192.168.1.7</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>DWhub</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f28af80baa40d185fcc8</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
     <name>dwsimma</name>
     <server/>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>dwsimma</database>
     <port>1521</port>
     <username/>
@@ -173,7 +219,7 @@
     <name>glpi</name>
     <server>10.10.2.1</server>
     <type>MYSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>glpi</database>
     <port>3306</port>
     <username>dba_admin</username>
@@ -243,39 +289,14 @@
     </attributes>
   </connection>
   <connection>
-    <name>OpanOficial</name>
-    <server>localhost</server>
+    <name>OPANDataBase</name>
+    <server>DESKTOP-F60G61I</server>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>OPANDataBase</database>
     <port>1433</port>
-    <username/>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>OPANTeste</name>
-    <server>localhost</server>
-    <type>MSSQL</type>
-    <access>, </access>
-    <database>OPANDataBaseTeste</database>
-    <port>1433</port>
-    <username/>
-    <password>Encrypted </password>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f28af80baa40d185fcc8</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -296,7 +317,7 @@
     <name>OrcamentoVM</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>OrcamentoVM</database>
     <port>1433</port>
     <username>siga</username>
@@ -319,7 +340,7 @@
     <name>Pentaho</name>
     <server>localhost</server>
     <type>MYSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>Pentaho</database>
     <port>3306</port>
     <username>root</username>
@@ -344,7 +365,7 @@
     <name>Protheus</name>
     <server/>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>Protheus</database>
     <port>1521</port>
     <username/>
@@ -367,7 +388,7 @@
     <name>Protheus7</name>
     <server/>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>Protheus7</database>
     <port>1521</port>
     <username/>
@@ -390,7 +411,7 @@
     <name>redes_dw</name>
     <server>localhost</server>
     <type>MYSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>redes_dw</database>
     <port>3306</port>
     <username>root</username>
@@ -415,7 +436,7 @@
     <name>SGI</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>SGI</database>
     <port>1433</port>
     <username>siga</username>
@@ -438,7 +459,7 @@
     <name>siga_dw</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>siga_dw</database>
     <port>1433</port>
     <username>siga</username>
@@ -461,7 +482,7 @@
     <name>SIMMA</name>
     <server>192.168.2.204</server>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>SIMMA</database>
     <port>1433</port>
     <username>sa</username>
@@ -484,7 +505,7 @@
     <name>Simmabr</name>
     <server/>
     <type>MSSQLNATIVE</type>
-    <access>, </access>
+    <access>Native</access>
     <database>Simmabr</database>
     <port>1521</port>
     <username/>
@@ -507,7 +528,7 @@
     <name>SimmaSTS</name>
     <server/>
     <type>MSSQLNATIVE</type>
-    <access>, </access>
+    <access>Native</access>
     <database>SimmaSTS</database>
     <port>1521</port>
     <username/>
@@ -550,11 +571,11 @@
     </attributes>
   </connection>
   <connection>
-    <name>STS</name>
+    <name>STSDataBase</name>
     <server>192.168.1.7</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>SUN6</database>
+    <database>STSDataBase</database>
     <port>1433</port>
     <username>sa</username>
     <password>Encrypted 2be98afc86aa7f28af80baa40d185fcc8</password>
@@ -567,31 +588,10 @@
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>STSDataBase</name>
-    <server>192.168.1.7</server>
-    <type>MSSQL</type>
-    <access>, </access>
-    <database>STSDataBase</database>
-    <port>1433</port>
-    <username>siga</username>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -599,7 +599,7 @@
     <name>STSDW</name>
     <server>10.10.2.6</server>
     <type>MYSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>STSDW</database>
     <port>3306</port>
     <username>pentaho</username>
@@ -623,7 +623,7 @@
     <server>192.168.1.5</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>STSDataBase</database>
+    <database>dadosadv</database>
     <port>1433</port>
     <username>siga</username>
     <password>Encrypted 2be98afc86aa7f2e4cb7981628d95ffd4</password>
@@ -645,7 +645,7 @@
     <name>STSProtheus</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>STSProtheus</database>
     <port>1433</port>
     <username>siga</username>
@@ -760,7 +760,7 @@
     <name>SunSystem</name>
     <server>192.168.1.32</server>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>SunSystem</database>
     <port>1433</port>
     <username>sa</username>
@@ -783,7 +783,7 @@
     <name>VMMembership</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>, </access>
+    <access>Native</access>
     <database>VMMembership</database>
     <port>1433</port>
     <username>siga</username>
@@ -803,44 +803,21 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Table input</from><to>Database join</to><enabled>Y</enabled> </hop>
-  <hop> <from>Database join</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>procura calendario ano inicio</from><to>Filter rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>projetos validos</from><to>procura calendario ano inicio</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>procura proximo calendario</to><enabled>Y</enabled> </hop>
+  <hop> <from>procura proximo calendario</from><to>Filter rows 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>remove 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>remove 2</from><to>renomeia</to><enabled>Y</enabled> </hop>
+  <hop> <from>verifica calendario e dt final projeto</from><to>maior q dt final do prj</to><enabled>Y</enabled> </hop>
+  <hop> <from>verifica calendario e dt final projeto</from><to>remove</to><enabled>Y</enabled> </hop>
+  <hop> <from>remove</from><to>renomeia 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>renomeia 2</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>renomeia</from><to>Select values</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values</from><to>Execute SQL script</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows 2</from><to>ja existe</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows 2</from><to>verifica calendario e dt final projeto</to><enabled>Y</enabled> </hop>
   </order>
-  <step>
-    <name>Database join</name>
-    <type>DBJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>OpanOficial</connection>
-    <rowlimit>0</rowlimit>
-    <sql>SELECT &#xa;AccountingCalendarOperationalObjective.Sequential as IdCalendarioOperacional2016&#xa;&#xa;FROM AccountingCalendarOperationalObjective&#xa;				INNER JOIN AccountingCalendar on &#x28;AccountingCalendarOperationalObjective.AccountingCalendar &#x3d; AccountingCalendar.Sequential&#x29;&#xa;				INNER JOIN OperationalObjective on &#x28;AccountingCalendarOperationalObjective.OperationalObjective &#x3d; OperationalObjective.Sequential&#x29;&#xa;				INNER JOIN StrategicObjective on &#x28;OperationalObjective.StrategicObjective &#x3d; StrategicObjective.Sequential&#x29;&#xa;				inner join Project on &#x28;StrategicObjective.Project &#x3d; Project.Sequential&#x29;&#xa;where AccountingCalendar.FiscalYear &#x3d; year&#x28;getdate&#x28;&#x29;&#x29;-1				&#xa;and Project.Sequential &#x3d;&#x3f;&#xa;And OperationalObjective.Sequential &#x3d;&#x3f;</sql>
-    <outer_join>N</outer_join>
-    <replace_vars>Y</replace_vars>
-    <parameter>
-      <field>
-        <name>IdProjeto</name>
-        <type>Integer</type>
-      </field>
-      <field>
-        <name>IdOperacional</name>
-        <type>Integer</type>
-      </field>
-    </parameter>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>394</xloc>
-      <yloc>169</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
   <step>
     <name>Execute SQL script</name>
     <type>ExecSQL</type>
@@ -852,35 +829,87 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>OpanOficial</connection>
+    <connection>OPANDataBase</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>INSERT INTO Activity &#xa;&#x28;&#xa;Code&#xa;,Description&#xa;,DescriptionEnglish&#xa;,ActivityType&#xa;,OperationalObjective&#xa;,PlanningOperationalObjective&#xa;,ManAided&#xa;,WomenAided&#xa;,TeenAided&#xa;,ChildrenAided&#xa;,PreAssumption&#xa;,PreAssumptionEnglish&#xa;,Thematic&#xa;,FundType&#xa;,PlanningJanuary&#xa;,PlanningFebruary&#xa;,PlanningMarch&#xa;,PlanningApril&#xa;,PlanningMay&#xa;,PlanningJune&#xa;,PlanningJuly&#xa;,PlanningAugust&#xa;,PlanningSeptember&#xa;,PlanningOctober&#xa;,PlanningNovember&#xa;,PlanningDecember&#xa;,Status&#xa;,Deleted&#xa;,TimeStampSTS&#xa;,AccountingCalendarOperationalObjective&#xa;,StrategicAreaMain&#xa;,CurrentPlanning&#xa;,Mapping&#xa;,HEA&#xa;,Translated&#xa;,Regional&#xa;&#x29;&#xa;values&#xa;&#x28;&#xa;&#x27;&#x3f;&#x27;,&#xa;&#x27;&#x3f;&#x27;,&#xa;&#x27;&#x3f;&#x27;,&#xa;&#x3f;,&#xa;NULL,&#xa;NULL,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;&#x27;&#x3f;&#x27;,&#xa;&#x27;&#x3f;&#x27;,&#xa;1,&#xa;&#x3f;,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;0,&#xa;1,&#xa;0,&#xa;GETDATE&#x28;&#x29;,&#xa;&#x3f;,&#xa;&#x3f;,&#xa;1,&#xa;NULL,&#xa;&#x3f;,&#xa;&#x3f;,&#xa;&#x3f;&#xa;&#x29;</sql>
+    <sql>INSERT INTO AccountingCalendar &#x28;Code,Description,FiscalYear,Project,AuthenticationUser,Deleted,TimeStampSTS&#x29;&#xa;VALUES &#x28;&#xa;&#x27;AF&#x27;&#x2b; convert&#x28;varchar,&#x3f;,4&#x29;,&#xa;&#x27;Calend&#xe1;rio Cont&#xe1;bil AF&#x3a;&#x27;&#x2b;convert&#x28;varchar,&#x3f;,4&#x29;&#x2b;&#x27; &#x7c; &#x27;&#x2b; &#x27;&#x3f;&#x27; &#x2b;&#x27; - &#x27;&#x2b; &#x27;&#x3f;&#x27;,&#xa;&#x3f;,&#xa;&#x3f;,&#xa;&#x27;vmb_sistemas&#x40;wvi.org&#x27;,&#xa;null,&#xa;GETDATE&#x28;&#x29;&#xa;&#xa;&#x29;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
     <read_field/>
     <arguments>
-       <argument><name>Code</name></argument>
-       <argument><name>AtividadeDescricao</name></argument>
-       <argument><name>DescricaoIngles</name></argument>
-       <argument><name>ActivityType</name></argument>
-       <argument><name>PreAssumption</name></argument>
-       <argument><name>PreAssumptionEnglish</name></argument>
-       <argument><name>FundType</name></argument>
-       <argument><name>IdCalendarioOperacional2016</name></argument>
-       <argument><name>StrategicAreaMain</name></argument>
-       <argument><name>HEA</name></argument>
-       <argument><name>Translated</name></argument>
-       <argument><name>Regional</name></argument>
+       <argument><name>Ano</name></argument>
+       <argument><name>Ano</name></argument>
+       <argument><name>Projeto</name></argument>
+       <argument><name>NomeProjeto</name></argument>
+       <argument><name>Ano</name></argument>
+       <argument><name>IdProjeto</name></argument>
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>813</xloc>
-      <yloc>170</yloc>
+      <xloc>976</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>remove 2</send_true_to>
+<send_false_to>procura proximo calendario</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>Achou</leftvalue>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>Integer</type><text>0</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>432</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>verifica calendario e dt final projeto</send_true_to>
+<send_false_to>ja existe</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>AchouAnoSeguinte</leftvalue>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>Integer</type><text>0</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>256</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -896,24 +925,139 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
-      <remove>        <name>AnoFiscal</name>
-      </remove>      <remove>        <name>Projeto</name>
-      </remove>      <remove>        <name>IdProjeto</name>
-      </remove>      <remove>        <name>Atividade</name>
-      </remove>      <remove>        <name>IdOperacional</name>
-      </remove>      <remove>        <name>Atividade2015</name>
-      </remove>      <remove>        <name>TipoAtividade</name>
-      </remove>    </fields>     <cluster_schema/>
+    <fields>      <field>        <name>Projeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IdProjeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>NomeProjeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Ano</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>556</xloc>
-      <yloc>169</yloc>
+      <xloc>816</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Table input</name>
+    <name>ja existe</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>96</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>maior q dt final do prj</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>256</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>procura calendario ano inicio</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>OPANDataBase</connection>
+    <rowlimit>0</rowlimit>
+    <sql>SELECT COUNT&#x28;&#x2a;&#x29; as Achou FROM AccountingCalendar&#xd;&#xa;where Fiscalyear &#x3d; &#x3f;&#xd;&#xa;AND Project &#x3d; &#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>AnoInicio</name>
+        <type>Integer</type>
+      </field>
+      <field>
+        <name>IdProjeto</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>256</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>procura proximo calendario</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>OPANDataBase</connection>
+    <rowlimit>0</rowlimit>
+    <sql>SELECT COUNT&#x28;&#x2a;&#x29; as AchouAnoSeguinte FROM AccountingCalendar&#xd;&#xa;where Fiscalyear &#x3d; &#x3f;&#xd;&#xa;AND Project &#x3d; &#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>ProximoAno</name>
+        <type>Integer</type>
+      </field>
+      <field>
+        <name>IdProjeto</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>432</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>projetos validos</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -923,8 +1067,8 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>OpanOficial</connection>
-    <sql>SELECT &#xa;PlanejamentoProjeto2015.AnoFiscal,&#xa;PlanejamentoProjeto2015.Projeto,&#xa;PlanejamentoProjeto2015.IdProjeto,&#xa;PlanejamentoProjeto2015.Atividade,&#xa;PlanejamentoProjeto2015.Code,&#xa;PlanejamentoProjeto2015.FundType,&#xa;PlanejamentoProjeto2015.AtividadeDescricao as AtividadeDescricao,&#xa;PlanejamentoProjeto2015.DescricaoIngles,&#xa;PlanejamentoProjeto2015.PreAssumption,&#xa;PlanejamentoProjeto2015.PreAssumptionEnglish,&#xa;PlanejamentoProjeto2015.TipoAtividade,&#xa;PlanejamentoProjeto2015.ActivityType,&#xa;PlanejamentoProjeto2015.IdOperacional,&#xa;PlanejamentoProjeto2015.Atividade as Atividade2015,&#xa;PlanejamentoProjeto2015.StrategicAreaMain,&#xa;case&#xa;when PlanejamentoProjeto2015.HEA &#x3d; 0 then 0&#xa;when PlanejamentoProjeto2015.HEA &#x3d; 1 then 1&#xa;END as HEA,&#xa;case&#xa;when PlanejamentoProjeto2015.Translated &#x3d; 0 then 0&#xa;when PlanejamentoProjeto2015.Translated &#x3d; 1 then 1&#xa;END as Translated,&#xa;case&#xa;when PlanejamentoProjeto2015.Regional &#x3d; 0 then 0&#xa;when PlanejamentoProjeto2015.Regional &#x3d; 1 then 1&#xa;END as Regional&#xa;&#xa;&#xa;FROM PlanejamentoProjeto as PlanejamentoProjeto2015&#xa;									LEFT JOIN PlanejamentoProjeto AS PlanejamentoProjeto2016 ON &#x28;PlanejamentoProjeto2015.Projeto &#x3d; PlanejamentoProjeto2016.Projeto and PlanejamentoProjeto2015.Atividade &#x3d; PlanejamentoProjeto2016.Atividade and PlanejamentoProjeto2016.AnoFiscal &#x3d;YEAR&#x28;getdate&#x28;&#x29;&#x29;&#x29;&#xa;									&#xa;									&#xa;WHERE PlanejamentoProjeto2015.AnoFiscal &#x3d;YEAR&#x28;getdate&#x28;&#x29;&#x29; -1&#xa;AND PlanejamentoProjeto2016.Atividade IS NULL&#xa;--AND PlanejamentoProjeto2015.TipoAtividade &#x3d;&#x27;Operacional&#x27;&#xa;ORDER BY Projeto</sql>
+    <connection>OPANDataBase</connection>
+    <sql>SELECT LTRIM&#x28;RTRIM&#x28;Project.Code&#x29;&#x29; as Projeto,&#xd;&#xa;Project.Sequential as IdProjeto,&#xd;&#xa;LTRIM&#x28;RTRIM&#x28;Project.Description&#x29;&#x29; as NomeProjeto,&#xd;&#xa;ProjectAgreementObjective.StartAgreement,&#xd;&#xa;year&#x28;ProjectAgreementObjective.StartAgreement&#x29; as AnoInicio,&#xd;&#xa;ProjectAgreementObjective.EndAgreement,&#xd;&#xa;YEAR&#x28;ProjectAgreementObjective.EndAgreement&#x29; as AnoFinal,&#xd;&#xa;YEAR&#x28;ProjectAgreementObjective.EndAgreement&#x29; - year&#x28;ProjectAgreementObjective.StartAgreement&#x29; as DiferencaAno,&#xd;&#xa;&#x28;SELECT case when max&#x28;FiscalYear&#x29; is null then 0 else max&#x28;FiscalYear&#x29;&#x2b;1 end FROM AccountingCalendar as ac&#xd;&#xa;WHERE ac.Project &#x3d; Project.Sequential&#xd;&#xa;&#x29; as ProximoAno&#xd;&#xa;&#xd;&#xa;FROM Project, ProjectAgreementObjective, Program&#xd;&#xa;WHERE Project.ProjectAgreementObjective &#x3d; ProjectAgreementObjective.Sequential&#xd;&#xa;AND  Valid &#x3d;1&#xd;&#xa;AND Program.Sequential &#x3d; Project.Program&#xd;&#xa;--AND YEAR&#x28;ProjectAgreementObjective.EndAgreement&#x29; &#x3e;&#x3d;year&#x28;GETDATE&#x28;&#x29;&#x29;&#xd;&#xa;--AND Project.Sequential NOT IN &#x28;SELECT Project FROM AccountingCalendar WHERE FiscalYear &#x3d; year&#x28;GETDATE&#x28;&#x29;&#x29;&#x29;&#xd;&#xa;&#xd;&#xa;--and Project.Sequential &#x3d; 4</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -932,8 +1076,162 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>197</xloc>
-      <yloc>176</yloc>
+      <xloc>96</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>remove</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>StartAgreement</name>
+      </remove>      <remove>        <name>AnoInicio</name>
+      </remove>      <remove>        <name>DiferencaAno</name>
+      </remove>      <remove>        <name>Achou</name>
+      </remove>      <remove>        <name>AchouAnoSeguinte</name>
+      </remove>      <remove>        <name>EndAgreement</name>
+      </remove>      <remove>        <name>AnoFinal</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>528</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>remove 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>StartAgreement</name>
+      </remove>      <remove>        <name>EndAgreement</name>
+      </remove>      <remove>        <name>AnoFinal</name>
+      </remove>      <remove>        <name>DiferencaAno</name>
+      </remove>      <remove>        <name>ProximoAno</name>
+      </remove>      <remove>        <name>Achou</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>544</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>renomeia</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Projeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IdProjeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>NomeProjeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AnoInicio</name>
+        <rename>Ano</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>656</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>renomeia 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Projeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IdProjeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>NomeProjeto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ProximoAno</name>
+        <rename>Ano</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>656</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>verifica calendario e dt final projeto</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>remove</send_true_to>
+<send_false_to>maior q dt final do prj</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>ProximoAno</leftvalue>
+ <function>&#x3c;&#x3d;</function>
+ <rightvalue>AnoFinal</rightvalue>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>256</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
