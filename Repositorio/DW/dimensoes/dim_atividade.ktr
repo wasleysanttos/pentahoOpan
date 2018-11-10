@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>6-Migra atividades v2</name>
+    <name>dim_atividade</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
     </parameters>
@@ -66,12 +65,10 @@
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
-  <created_user>-</created_user>
-  <created_date>2015&#x2f;10&#x2f;23 00&#x3a;51&#x3a;23.673</created_date>
+  <created_user/>
+  <created_date>2011&#x2f;09&#x2f;09 14&#x3a;49&#x3a;27.809</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#x2f;10&#x2f;23 00&#x3a;51&#x3a;23.673</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
-    <is_key_private>N</is_key_private>
+  <modified_date>2011&#x2f;01&#x2f;05 12&#x3a;40&#x3a;35.129</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -125,26 +122,26 @@
   </connection>
   <connection>
     <name>DW</name>
-    <server>localhost</server>
-    <type>MYSQL</type>
+    <server>192.168.1.10</server>
+    <type>MSSQL</type>
     <access>Native</access>
-    <database>test</database>
-    <port>3306</port>
-    <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb09ab7eca93a7d5</password>
+    <database>OPANDataWarehouse</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2abbb18a04fec9da0ce</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -152,7 +149,7 @@
     <name>dwsimma</name>
     <server/>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>dwsimma</database>
     <port>1521</port>
     <username/>
@@ -175,7 +172,7 @@
     <name>glpi</name>
     <server>10.10.2.1</server>
     <type>MYSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>glpi</database>
     <port>3306</port>
     <username>dba_admin</username>
@@ -197,83 +194,10 @@
     </attributes>
   </connection>
   <connection>
-    <name>Moodle</name>
-    <server>10.10.2.1</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>moodle</database>
-    <port>3306</port>
-    <username>dba_admin</username>
-    <password>Encrypted 2be98afc86aa7f292a61baa75dc9baed4</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>NewSimma</name>
-    <server>192.168.2.204</server>
-    <type>MSSQL</type>
-    <access>Native</access>
-    <database>NewSimma</database>
-    <port>1433</port>
-    <username>sa</username>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
     <name>OPANDataBase</name>
-    <server>DESKTOP-F60G61I</server>
-    <type>MSSQL</type>
-    <access>Native</access>
-    <database>OPANDataBase</database>
-    <port>1433</port>
-    <username>sa</username>
-    <password>Encrypted 2be98afc86aa7f28af80baa40d185fcc8</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>OpanOficial</name>
     <server>localhost</server>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>OPANDataBase</database>
     <port>1433</port>
     <username/>
@@ -295,14 +219,14 @@
     </attributes>
   </connection>
   <connection>
-    <name>OPANTeste</name>
+    <name>OPANDataBaseTeste</name>
     <server>localhost</server>
     <type>MSSQL</type>
     <access>Native</access>
     <database>OPANDataBaseTeste</database>
     <port>1433</port>
-    <username/>
-    <password>Encrypted </password>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2abbb18a04fec9da0ce</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -323,7 +247,7 @@
     <name>OrcamentoVM</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>OrcamentoVM</database>
     <port>1433</port>
     <username>siga</username>
@@ -346,7 +270,7 @@
     <name>Pentaho</name>
     <server>localhost</server>
     <type>MYSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>Pentaho</database>
     <port>3306</port>
     <username>root</username>
@@ -371,7 +295,7 @@
     <name>Protheus</name>
     <server/>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>Protheus</database>
     <port>1521</port>
     <username/>
@@ -394,7 +318,7 @@
     <name>Protheus7</name>
     <server/>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>Protheus7</database>
     <port>1521</port>
     <username/>
@@ -417,7 +341,7 @@
     <name>redes_dw</name>
     <server>localhost</server>
     <type>MYSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>redes_dw</database>
     <port>3306</port>
     <username>root</username>
@@ -442,7 +366,7 @@
     <name>SGI</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>SGI</database>
     <port>1433</port>
     <username>siga</username>
@@ -465,7 +389,7 @@
     <name>siga_dw</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>siga_dw</database>
     <port>1433</port>
     <username>siga</username>
@@ -488,7 +412,7 @@
     <name>SIMMA</name>
     <server>192.168.2.204</server>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>SIMMA</database>
     <port>1433</port>
     <username>sa</username>
@@ -508,102 +432,10 @@
     </attributes>
   </connection>
   <connection>
-    <name>Simmabr</name>
-    <server/>
-    <type>MSSQLNATIVE</type>
-    <access>Native</access>
-    <database>Simmabr</database>
-    <port>1521</port>
-    <username/>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>SimmaSTS</name>
-    <server/>
-    <type>MSSQLNATIVE</type>
-    <access>Native</access>
-    <database>SimmaSTS</database>
-    <port>1521</port>
-    <username/>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>SimmaTeste</name>
-    <server>192.168.2.141</server>
-    <type>MSSQL</type>
-    <access>Native</access>
-    <database>Simma</database>
-    <port>1433</port>
-    <username>sa</username>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>STS</name>
-    <server>192.168.1.7</server>
-    <type>MSSQL</type>
-    <access>Native</access>
-    <database>SUN6</database>
-    <port>1433</port>
-    <username>sa</username>
-    <password>Encrypted 2be98afc86aa7f28af80baa40d185fcc8</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
     <name>STSDataBase</name>
     <server>192.168.1.7</server>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>STSDataBase</database>
     <port>1433</port>
     <username>siga</username>
@@ -626,7 +458,7 @@
     <name>STSDW</name>
     <server>10.10.2.6</server>
     <type>MYSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>STSDW</database>
     <port>3306</port>
     <username>pentaho</username>
@@ -650,7 +482,7 @@
     <server>192.168.1.5</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>STSDataBase</database>
+    <database>dadosadv</database>
     <port>1433</port>
     <username>siga</username>
     <password>Encrypted 2be98afc86aa7f2e4cb7981628d95ffd4</password>
@@ -672,7 +504,7 @@
     <name>STSProtheus</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>STSProtheus</database>
     <port>1433</port>
     <username>siga</username>
@@ -692,102 +524,10 @@
     </attributes>
   </connection>
   <connection>
-    <name>STSTeste</name>
-    <server>192.168.1.7</server>
-    <type>MSSQL</type>
-    <access>Native</access>
-    <database>STSDataBaseTeste</database>
-    <port>1433</port>
-    <username>sa</username>
-    <password>Encrypted 2be98afc86aa7f28af80baa40d185fcc8</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>Sun6-Brasil</name>
-    <server>10.60.32.80</server>
-    <type>MSSQL</type>
-    <access>Native</access>
-    <database>SUNLAT</database>
-    <port>1433</port>
-    <username>BRA_SQL</username>
-    <password>Encrypted 2e6f08a891df6a1bae202fa3aefbafd92</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>Sun6-ECU</name>
-    <server>10.60.32.80</server>
-    <type>MSSQL</type>
-    <access>Native</access>
-    <database>SUNLAT</database>
-    <port>1433</port>
-    <username>ECU_SQL</username>
-    <password>Encrypted 2c6d9f7ac56dedadaf84de43effccb6fc</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>Sun6-PER</name>
-    <server>10.60.32.80</server>
-    <type>MSSQL</type>
-    <access>Native</access>
-    <database>SUNLAT</database>
-    <port>1433</port>
-    <username>PER_SQL</username>
-    <password>Encrypted 2c6ae93923e82d3dbb11ebf6883bea586</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
     <name>SunSystem</name>
     <server>192.168.1.32</server>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>SunSystem</database>
     <port>1433</port>
     <username>sa</username>
@@ -810,7 +550,7 @@
     <name>VMMembership</name>
     <server>192.168.1.5</server>
     <type>MSSQL</type>
-    <access>Native</access>
+    <access>, </access>
     <database>VMMembership</database>
     <port>1433</port>
     <username>siga</username>
@@ -830,18 +570,13 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>lista de atividades</from><to>retorna calendarios</to><enabled>Y</enabled> </hop>
-  <hop> <from>retorna calendarios</from><to>verifica se ja esta cadastrado</to><enabled>Y</enabled> </hop>
-  <hop> <from>verifica se ja esta cadastrado</from><to>Filter rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows</from><to>busca calendario operacional</to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
-  <hop> <from>busca calendario operacional</from><to>Sort rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort rows</from><to>Select values</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values</from><to>Execute SQL script</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input</from><to>String operations</to><enabled>Y</enabled> </hop>
+  <hop> <from>String operations</from><to>Surrogate</to><enabled>Y</enabled> </hop>
+  <hop> <from>Surrogate</from><to>Dimension lookup&#x2f;update</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>busca calendario operacional</name>
-    <type>DBJoin</type>
+    <name>Dimension lookup&#x2f;update</name>
+    <type>DimensionLookup</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -850,36 +585,114 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>OPANDataBase</connection>
-    <rowlimit>0</rowlimit>
-    <sql>SELECT &#xa;AccountingCalendarOperationalObjective.Sequential as IdCalendarioOperacional&#xa;&#xa;FROM AccountingCalendarOperationalObjective&#xa;				INNER JOIN AccountingCalendar on &#x28;AccountingCalendarOperationalObjective.AccountingCalendar &#x3d; AccountingCalendar.Sequential&#x29;&#xa;				INNER JOIN OperationalObjective on &#x28;AccountingCalendarOperationalObjective.OperationalObjective &#x3d; OperationalObjective.Sequential&#x29;&#xa;				INNER JOIN StrategicObjective on &#x28;OperationalObjective.StrategicObjective &#x3d; StrategicObjective.Sequential&#x29;&#xa;				inner join Project on &#x28;StrategicObjective.Project &#x3d; Project.Sequential&#x29;&#xa;where AccountingCalendar.Sequential &#x3d; &#x3f;				&#xa;and Project.Sequential &#x3d;&#x3f;&#xa;And OperationalObjective.Sequential &#x3d;&#x3f;</sql>
-    <outer_join>N</outer_join>
-    <replace_vars>Y</replace_vars>
-    <parameter>
-      <field>
-        <name>Calendario</name>
-        <type>Integer</type>
-      </field>
-      <field>
-        <name>IdProjeto</name>
-        <type>Integer</type>
-      </field>
-      <field>
-        <name>OperationalObjective</name>
-        <type>Integer</type>
-      </field>
-    </parameter>
+      <schema/>
+      <table>dim_atividade</table>
+      <connection>DW</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>objetivo_estrategico_codigo</name>
+          <lookup>objetivo_estrategico_codigo</lookup>
+        </key>
+        <key>
+          <name>objetivo_operational_codigo</name>
+          <lookup>objetivo_operational_codigo</lookup>
+        </key>
+        <key>
+          <name>atividade_codigo</name>
+          <lookup>atividade_codigo</lookup>
+        </key>
+        <key>
+          <name>atividade_ano_fiscal</name>
+          <lookup>atividade_ano_fiscal</lookup>
+        </key>
+        <key>
+          <name>atividade_projeto</name>
+          <lookup>atividade_projeto</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <field>
+          <name>T6</name>
+          <lookup>T6</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>objetivo_estrategico_descricao</name>
+          <lookup>objetivo_estrategico_descricao</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>objetivo_operational_descricao</name>
+          <lookup>objetivo_operational_descricao</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>atividadel_sequencial</name>
+          <lookup>atividadel_sequencial</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>atividade_descricao</name>
+          <lookup>atividade_descricao</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>atividade_codigo_tipo</name>
+          <lookup>atividade_codigo_tipo</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>atividade_codigo_tipo_fundo</name>
+          <lookup>atividade_codigo_tipo_fundo</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>atividade_codigo_area_estrategica_principal</name>
+          <lookup>atividade_codigo_area_estrategica_principal</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>atividade_descricao_area_estrategica_principal</name>
+          <lookup>atividade_descricao_area_estrategica_principal</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>objetivo_operational_codigoL2</name>
+          <lookup>objetivo_operational_codigoL2</lookup>
+          <update>Update</update>
+        </field>
+        <return>
+          <name>atividade_id</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>688</xloc>
-      <yloc>160</yloc>
+      <xloc>678</xloc>
+      <yloc>76</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Execute SQL script</name>
-    <type>ExecSQL</type>
+    <name>String operations</name>
+    <type>StringOperations</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -888,37 +701,162 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>OPANDataBase</connection>
-    <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>INSERT INTO Activity &#xd;&#xa;&#x28;&#xd;&#xa;Code&#xd;&#xa;,Description&#xd;&#xa;,ActivityType&#xd;&#xa;,ManAided&#xd;&#xa;,WomenAided&#xd;&#xa;,TeenAided&#xd;&#xa;,ChildrenAided&#xd;&#xa;,PreAssumption&#xd;&#xa;,Thematic&#xd;&#xa;,FundType&#xd;&#xa;,PlanningJanuary&#xd;&#xa;,PlanningFebruary&#xd;&#xa;,PlanningMarch&#xd;&#xa;,PlanningApril&#xd;&#xa;,PlanningMay&#xd;&#xa;,PlanningJune&#xd;&#xa;,PlanningJuly&#xd;&#xa;,PlanningAugust&#xd;&#xa;,PlanningSeptember&#xd;&#xa;,PlanningOctober&#xd;&#xa;,PlanningNovember&#xd;&#xa;,PlanningDecember&#xd;&#xa;,Status&#xd;&#xa;,Deleted&#xd;&#xa;,TimeStampSTS&#xd;&#xa;,AccountingCalendarOperationalObjective&#xd;&#xa;,StrategicAreaMain&#xd;&#xa;,CurrentPlanning&#xd;&#xa;,HEA&#xd;&#xa;,Translated&#xd;&#xa;,Regional&#xd;&#xa;,AuthenticationUser&#xd;&#xa;&#x29;&#xd;&#xa;values&#xd;&#xa;&#x28;&#xd;&#xa;&#x27;&#x3f;&#x27;,&#xd;&#xa;&#x27;&#x3f;&#x27;,&#xd;&#xa;&#x3f;,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;&#x27;&#x3f;&#x27;,&#xd;&#xa;1,&#xd;&#xa;&#x3f;,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;1,&#xd;&#xa;0,&#xd;&#xa;GETDATE&#x28;&#x29;,&#xd;&#xa;&#x3f;,&#xd;&#xa;&#x3f;,&#xd;&#xa;1,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;0,&#xd;&#xa;&#x27;wasleyguittar&#x40;gmail.com&#x27;&#xd;&#xa;&#x29;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-       <argument><name>CodeAtividade</name></argument>
-       <argument><name>DescAtividade</name></argument>
-       <argument><name>ActivityType</name></argument>
-       <argument><name>PreAssumption</name></argument>
-       <argument><name>FundType</name></argument>
-       <argument><name>IdCalendarioOperacional</name></argument>
-       <argument><name>StrategicAreaMain</name></argument>
-    </arguments>
+    <fields>
+      <field>
+        <in_stream_name>T6</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>objetivo_estrategico_codigo</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>objetivo_estrategico_descricao</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>objetivo_operational_codigo</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>objetivo_operational_descricao</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>atividade_codigo</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>atividade_descricao</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>atividade_codigo_area_estrategica_principal</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>atividade_descricao_area_estrategica_principal</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>atividade_projeto</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>objetivo_operational_codigoL2</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>880</xloc>
-      <yloc>368</yloc>
+      <xloc>188</xloc>
+      <yloc>77</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
+    <name>Surrogate</name>
+    <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -927,77 +865,26 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>IdProjeto</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>Atividade</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>Calendario</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>FiscalYear</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>IdCalendarioOperacional</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>OperationalObjective</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>StrategicObjective</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>CodeAtividade</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>DescAtividade</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>ActivityType</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>PreAssumption</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>FundType</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>AccountingCalendarOperationalObjective</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>StrategicAreaMain</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>achouAtividade</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
+      <valuename>atividade_id</valuename>
+      <use_database>N</use_database>
+      <connection/>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>1</start_at>
+      <increment_by>1</increment_by>
+      <max_value>999999999</max_value>
+     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>880</xloc>
-      <yloc>160</yloc>
+      <xloc>313</xloc>
+      <yloc>77</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>lista de atividades</name>
+    <name>Table input</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1008,7 +895,7 @@
            <schema_name/>
            </partitioning>
     <connection>OPANDataBase</connection>
-    <sql>SELECT &#xd;&#xa;Project.Sequential as IdProjeto,&#xd;&#xa;LTRIM&#x28;RTRIM&#x28;StrategicObjective.Code&#x29;&#x29; &#x2b; LTRIM&#x28;RTRIM&#x28;OperationalObjective.Code&#x29;&#x29; &#x2b; LTRIM&#x28;RTRIM&#x28;Activity.Code&#x29;&#x29; as Atividade,&#xd;&#xa;OperationalObjective.Sequential as OperationalObjective,&#xd;&#xa;StrategicObjective.Sequential as StrategicObjective,&#xd;&#xa;LTRIM&#x28;RTRIM&#x28;Activity.Code&#x29;&#x29; as CodeAtividade,&#xd;&#xa;&#xd;&#xa;Activity.Description as DescAtividade,&#xd;&#xa;Activity.ActivityType,&#xd;&#xa;Activity.PreAssumption,&#xd;&#xa;Activity.FundType,&#xd;&#xa;Activity.AccountingCalendarOperationalObjective,&#xd;&#xa;Activity.StrategicAreaMain&#xd;&#xa;&#xd;&#xa;FROM Project&#xd;&#xa;  inner join AccountingCalendar ON &#x28;AccountingCalendar.Project &#x3d; Project.Sequential&#x29;    &#xd;&#xa;  inner join AccountingCalendarOperationalObjective ON &#x28;AccountingCalendarOperationalObjective.AccountingCalendar &#x3d; AccountingCalendar.Sequential&#x29; &#xd;&#xa;  inner join OperationalObjective ON &#x28;AccountingCalendarOperationalObjective.OperationalObjective &#x3d; OperationalObjective.Sequential&#x29;    &#xd;&#xa;  inner join StrategicObjective ON &#x28;OperationalObjective.StrategicObjective &#x3d; StrategicObjective.Sequential&#x29;    &#xd;&#xa;  inner join Activity ON &#x28;Activity.AccountingCalendarOperationalObjective &#x3d; AccountingCalendarOperationalObjective.Sequential&#x29;    &#xd;&#xa; &#xd;&#xa;Where Activity.CurrentPlanning &#x3d; 1 &#xd;&#xa;and FiscalYear &#x3d; &#x28;select Max&#x28;FiscalYear&#x29;-1 FROM AccountingCalendar as AC WHERE AC.Project &#x3d; Project.Sequential &#x29;&#xd;&#xa;--and Project.Sequential &#x3d; 4&#xd;&#xa;&#xd;&#xa;--and LTRIM&#x28;RTRIM&#x28;StrategicObjective.Code&#x29;&#x29; &#x2b; LTRIM&#x28;RTRIM&#x28;OperationalObjective.Code&#x29;&#x29; &#x2b; LTRIM&#x28;RTRIM&#x28;Activity.Code&#x29;&#x29; &#x3d;&#x27;030101&#x27;&#xd;&#xa;</sql>
+    <sql>Select so.Code&#x2b;&#x27;.&#x27;&#x2b;oo.Code&#x2b;&#x27;.&#x27;&#x2b;atv.Code as T6&#xd;&#xa;&#xd;&#xa;, so.Code					as objetivo_estrategico_codigo&#xd;&#xa;, so.Description			as objetivo_estrategico_descricao&#xd;&#xa;&#xd;&#xa;, oo.Code		as objetivo_operational_codigo&#xd;&#xa;, oo.Description			as objetivo_operational_descricao&#xd;&#xa;&#xd;&#xa;, so.Code&#x2b;&#x27;.&#x27;&#x2b;oo.Code		as objetivo_operational_codigoL2&#xd;&#xa;&#xd;&#xa;, atv.Sequential 			as atividadel_sequencial&#xd;&#xa;, atv.Code					as atividade_codigo&#xd;&#xa;, atv.Description			as atividade_descricao&#xd;&#xa;, atv.ActivityType			as atividade_codigo_tipo&#xd;&#xa;, atv.FundType				as atividade_codigo_tipo_fundo&#xd;&#xa;, sa.Code					as atividade_codigo_area_estrategica_principal&#xd;&#xa;, sa.Description			as atividade_descricao_area_estrategica_principal&#xd;&#xa;, ac.FiscalYear				as atividade_ano_fiscal&#xd;&#xa;, prj.Code					as atividade_projeto&#xd;&#xa;&#xd;&#xa;&#xd;&#xa; from &#xd;&#xa;&#xd;&#xa;Activity atv&#xd;&#xa;, OperationalObjective oo&#xd;&#xa;, AccountingCalendarOperationalObjective acoo&#xd;&#xa;, StrategicObjective so&#xd;&#xa;, StrategicArea sa&#xd;&#xa;, AccountingCalendar ac&#xd;&#xa;, Project prj&#xd;&#xa;&#xd;&#xa;where atv.AccountingCalendarOperationalObjective&#x3d;acoo.Sequential&#xd;&#xa;and acoo.OperationalObjective&#x3d;oo.Sequential&#xd;&#xa;and oo.StrategicObjective&#x3d;so.Sequential&#xd;&#xa;and atv.StrategicAreaMain&#x3d;sa.Sequential&#xd;&#xa;and acoo.AccountingCalendar&#x3d;ac.Sequential&#xd;&#xa;and ac.Project&#x3d;prj.Sequential&#xd;&#xa;and atv.CurrentPlanning &#x3d; 1</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1016,170 +903,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>80</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>retorna calendarios</name>
-    <type>DBJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>OPANDataBase</connection>
-    <rowlimit>0</rowlimit>
-    <sql>SELECT &#xd;&#xa;AccountingCalendar.Sequential as Calendario,&#xa;FiscalYear&#xa;&#xa;FROM Project &#xa;  inner join AccountingCalendar ON &#x28;AccountingCalendar.Project &#x3d; Project.Sequential&#x29;    &#xa; &#xa;Where Project.Sequential &#x3d;&#x3f;&#xa;&#xd;&#xa;&#xd;&#xa;</sql>
-    <outer_join>N</outer_join>
-    <replace_vars>Y</replace_vars>
-    <parameter>
-      <field>
-        <name>IdProjeto</name>
-        <type>Integer</type>
-      </field>
-    </parameter>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>256</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>verifica se ja esta cadastrado</name>
-    <type>DBJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>OPANDataBase</connection>
-    <rowlimit>0</rowlimit>
-    <sql>SELECT &#xd;&#xa;count&#x28;&#x2a;&#x29; as achouAtividade&#xd;&#xa;&#xd;&#xa;FROM Project&#xd;&#xa;  inner join AccountingCalendar ON &#x28;AccountingCalendar.Project &#x3d; Project.Sequential&#x29;    &#xd;&#xa;  inner join AccountingCalendarOperationalObjective ON &#x28;AccountingCalendarOperationalObjective.AccountingCalendar &#x3d; AccountingCalendar.Sequential&#x29; &#xd;&#xa;  inner join OperationalObjective ON &#x28;AccountingCalendarOperationalObjective.OperationalObjective &#x3d; OperationalObjective.Sequential&#x29;    &#xd;&#xa;  inner join StrategicObjective ON &#x28;OperationalObjective.StrategicObjective &#x3d; StrategicObjective.Sequential&#x29;    &#xd;&#xa;  inner join Activity ON &#x28;Activity.AccountingCalendarOperationalObjective &#x3d; AccountingCalendarOperationalObjective.Sequential&#x29;    &#xd;&#xa; &#xd;&#xa;Where Activity.CurrentPlanning &#x3d; 1 &#xd;&#xa;and Project.Sequential &#x3d; &#x3f;&#xd;&#xa;AND LTRIM&#x28;RTRIM&#x28;StrategicObjective.Code&#x29;&#x29; &#x2b; LTRIM&#x28;RTRIM&#x28;OperationalObjective.Code&#x29;&#x29; &#x2b; LTRIM&#x28;RTRIM&#x28;Activity.Code&#x29;&#x29;  &#x3d; &#x3f;&#xd;&#xa;AND AccountingCalendar.Fiscalyear &#x3d; &#x3f;</sql>
-    <outer_join>Y</outer_join>
-    <replace_vars>Y</replace_vars>
-    <parameter>
-      <field>
-        <name>IdProjeto</name>
-        <type>Integer</type>
-      </field>
-      <field>
-        <name>Atividade</name>
-        <type>String</type>
-      </field>
-      <field>
-        <name>FiscalYear</name>
-        <type>Integer</type>
-      </field>
-    </parameter>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>416</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>busca calendario operacional</send_true_to>
-<send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>achouAtividade</leftvalue>
- <function>&#x3d;</function>
- <rightvalue/>
- <value><name>constant</name><type>Integer</type><text>0</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>544</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Dummy &#x28;do nothing&#x29;</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>544</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort rows</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>IdProjeto</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>FiscalYear</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>Atividade</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>784</xloc>
-      <yloc>48</yloc>
+      <xloc>37</xloc>
+      <yloc>77</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

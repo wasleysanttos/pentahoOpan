@@ -1,0 +1,158 @@
+<Schema name="Financeiro">
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Periodo">
+    <Hierarchy name="Ano" visible="true" hasAll="true" primaryKey="tempo_id">
+      <Table name="dim_tempo" schema="dbo">
+      </Table>
+      <Level name="Ano" visible="true" column="ano" ordinalColumn="ano" type="Integer" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Semestre" visible="true" hasAll="true" primaryKey="tempo_id">
+      <Table name="dim_tempo" schema="dbo">
+      </Table>
+      <Level name="Semestre" visible="true" column="semestre_abreviado" ordinalColumn="semestre_abreviado" type="String" uniqueMembers="false" levelType="TimeHalfYear" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Trimestre" visible="true" hasAll="true" primaryKey="tempo_id">
+      <Table name="dim_tempo" schema="dbo">
+      </Table>
+      <Level name="Trimestre" visible="true" column="trimestre_abreviado" ordinalColumn="trimestre_abreviado" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Mes" visible="true" hasAll="true" primaryKey="tempo_id">
+      <Table name="dim_tempo" schema="dbo">
+      </Table>
+      <Level name="Mes" visible="true" column="mes_abreviado" ordinalColumn="mes" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Dia" visible="true" hasAll="true" primaryKey="tempo_id">
+      <Table name="dim_tempo" schema="dbo">
+      </Table>
+      <Level name="Dia" visible="true" column="dia_do_mes" ordinalColumn="dia_do_mes" type="Integer" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Projeto">
+    <Hierarchy name="Projeto" visible="true" hasAll="true" primaryKey="projeto_id">
+      <Table name="dim_projeto" schema="dbo">
+      </Table>
+      <Level name="Projeto" visible="true" column="projeto_descricao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Fornecedor">
+    <Hierarchy name="Fornecedor" visible="true" hasAll="true" primaryKey="fornecedor_id">
+      <Table name="dim_fornecedor" schema="dbo">
+      </Table>
+      <Level name="Nome Fornecedor" visible="true" column="SupplierDescription" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="CNPJ" visible="true" column="SupplierCNPJCPF" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rubrica">
+    <Hierarchy name="Rubrica" visible="true" hasAll="true" primaryKey="conta_id">
+      <Table name="dim_conta" schema="dbo">
+      </Table>
+      <Level name="Rubrica Sintetica" visible="true" column="contaSintetica" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Rubrica analitica" visible="true" column="codigoAnalitico" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Rubrica Despesa" visible="true" column="descricaoAnalitica" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Fundo">
+    <Hierarchy name="Fundo" visible="true" hasAll="true" primaryKey="fundo_id">
+      <Table name="dim_fundo" schema="dbo">
+      </Table>
+      <Level name="Fundo" visible="true" column="fundo_descricao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Area">
+    <Hierarchy name="Area" visible="true" hasAll="true" primaryKey="area_id">
+      <Table name="dim_area" schema="dbo">
+      </Table>
+      <Level name="Area" visible="true" column="area_descricao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Planejamento">
+    <Hierarchy name="Planejamento" visible="true" hasAll="true" primaryKey="atividade_id">
+      <Table name="dim_atividade" schema="dbo">
+      </Table>
+      <Level name="Resultado" visible="true" column="objetivo_estrategico_codigo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Produto" visible="true" column="objetivo_operational_codigoL2" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Atividade" visible="true" column="T6" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Realizado" visible="true" cache="true" enabled="true">
+    <Table name="fact_realizado" schema="dbo">
+    </Table>
+    <DimensionUsage source="Projeto" name="Projeto" visible="true" foreignKey="projeto_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Periodo" name="Periodo" visible="true" foreignKey="tempo_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rubrica" name="Rubrica" visible="true" foreignKey="conta_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Fornecedor" name="Fornecedor" visible="true" foreignKey="fornecedor_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Fundo" name="Fundo" visible="true" foreignKey="fundo_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Area" name="Area" visible="true" foreignKey="area_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Planejamento" name="Planejamento" visible="true" foreignKey="atividade_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Realizado" column="realizado_valor" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="Orcado" visible="true" cache="true" enabled="true">
+    <Table name="fact_orcado" schema="dbo">
+    </Table>
+    <DimensionUsage source="Projeto" name="Projeto" visible="true" foreignKey="projeto_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Periodo" name="Periodo" visible="true" foreignKey="tempo_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rubrica" name="Rubrica" visible="true" foreignKey="conta_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Fornecedor" name="Fornecedor" visible="true" foreignKey="fornecedor_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Fundo" name="Fundo" visible="true" foreignKey="fundo_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Area" name="Area" visible="true" foreignKey="area_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Planejamento" name="Planejamento" visible="true" foreignKey="atividade_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Orcado" column="orcamento_valor" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <VirtualCube enabled="true" name="Orcado x Realizado" visible="true">
+    <CubeUsages>
+      <CubeUsage cubeName="Realizado" ignoreUnrelatedDimensions="true">
+      </CubeUsage>
+      <CubeUsage cubeName="Orcado" ignoreUnrelatedDimensions="true">
+      </CubeUsage>
+    </CubeUsages>
+    <VirtualCubeDimension cubeName="Realizado" visible="true" highCardinality="false" name="Periodo">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="Realizado" visible="true" highCardinality="false" name="Projeto">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="Realizado" visible="true" highCardinality="false" name="Fornecedor">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="Realizado" visible="true" highCardinality="false" name="Fundo">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="Realizado" visible="true" highCardinality="false" name="Area">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="Realizado" visible="true" highCardinality="false" name="Planejamento">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="Realizado" visible="true" highCardinality="false" name="Rubrica">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="Orcado" name="[Measures].[Orcado]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Realizado" name="[Measures].[Realizado]" visible="true">
+    </VirtualCubeMeasure>
+  </VirtualCube>
+</Schema>
